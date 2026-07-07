@@ -58,7 +58,6 @@ plant_diseases/
 
 ### 1. Clone the repository
 ```bash
-git clone <your-repo-url>
 cd plant_diseases
 ```
 
