@@ -121,8 +121,6 @@ Trained on the [New Plant Diseases Dataset](https://www.kaggle.com/datasets/vipo
 
 ## Author
 
-Built by [Your Name] as a machine learning + full-stack project.
+Built by Arpit Maurya as a machine learning + full-stack project.
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+ 
