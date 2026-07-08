@@ -77,10 +77,29 @@ function App() {
 
       {error && <p className="error">{error}</p>}
 
-      {result && (
-        <div className="result-box">
-          <h2>{result.disease.replace(/_/g, ' ')}</h2>
-          <p>Confidence: {result.confidence}%</p>
+      {result && result.top_predictions && (
+        <div className="results-list">
+          <h3 className="results-heading">Predictions</h3>
+          {result.top_predictions.map((pred, index) => (
+            <div
+              key={index}
+              className={`result-row ${index === 0 ? 'result-row-primary' : ''}`}
+            >
+              <div className="result-row-top">
+                <span className="result-rank">#{index + 1}</span>
+                <span className="result-name">
+                  {pred.disease.replace(/_/g, ' ')}
+                </span>
+                <span className="result-confidence">{pred.confidence}%</span>
+              </div>
+              <div className="confidence-bar-track">
+                <div
+                  className="confidence-bar-fill"
+                  style={{ width: `${pred.confidence}%` }}
+                />
+              </div>
+            </div>
+          ))}
         </div>
       )}
     </div>
